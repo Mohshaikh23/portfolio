@@ -24,62 +24,64 @@ text.innerHTML = text.innerHTML.split("").map((char,i)=>
 ).join("");
 
 
-// // switch between about buttons 
-document.addEventListener('DOMContentLoaded', function () {
+// switch between about buttons 
+// function showCompany(companyIndex) {
+//     const companyDescriptions = document.querySelectorAll('.company-description');
+//     companyDescriptions.forEach(description => description.style.display = 'none');
+
+//     const selectedCompany = document.getElementById(`company${companyIndex}`);
+//     selectedCompany.style.display = 'block';
+
+//     const companyButtons = document.querySelectorAll('.company-button');
+//     companyButtons.forEach(btn => btn.classList.remove('active'));
+//     companyButtons[companyIndex - 1].classList.add('active');
+// }
+
+// function showContent(contentType, companyIndex) {
+//     const contentSections = document.querySelectorAll(`#company${companyIndex} .content-section`);
+//     contentSections.forEach(section => section.style.display = 'none');
+
+//     const selectedContent = document.getElementById(`content${contentType}${companyIndex}`);
+//     selectedContent.style.display = 'block';
+// }
+
+function showCompany(companyIndex) {
+    // Hide all company descriptions
+    const companyDescriptions = document.querySelectorAll('.company-description');
+    companyDescriptions.forEach(description => description.style.display = 'none');
+
+    // Show the selected company description
+    const selectedCompany = document.getElementById(`company${companyIndex}`);
+    selectedCompany.style.display = 'block';
+
+    // Remove 'active' class from all company buttons
     const companyButtons = document.querySelectorAll('.company-button');
-    const companyContents = document.querySelectorAll('.section');
+    companyButtons.forEach(btn => btn.classList.remove('active'));
 
-    let activeCompany = 0; // Initialize the active company
+    // Add 'active' class to the selected company button
+    companyButtons[companyIndex - 1].classList.add('active');
 
-    companyButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            // Hide all company sections
-            companyContents.forEach(content => content.style.display = 'none');
+    // Show "Main Skills" content for the selected company
+    showContent('MainSkills', companyIndex);
+}
 
-            // Show the content of the selected company
-            companyContents[index].style.display = 'block';
+function showContent(contentType, companyIndex) {
+    // Hide all content sections for the selected company
+    const contentSections = document.querySelectorAll(`#company${companyIndex} .content-section`);
+    contentSections.forEach(section => section.style.display = 'none');
 
-            // Set the active state for the company buttons
-            companyButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    // Show the selected content section
+    const selectedContent = document.getElementById(`content${contentType}${companyIndex}`);
+    selectedContent.style.display = 'block';
+}
 
-            // Set the active company
-            activeCompany = index;
-        });
-    });
+function setInitialState() {
+    // Show the default company
+    showCompany(1);
+}
 
-    const contentButtons = document.querySelectorAll('.about-btn button');
-    const contents = document.querySelectorAll('.content');
-
-    contentButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            // Hide all contents
-            contents.forEach(content => content.style.display = 'none');
-
-            // Show the content of the active company
-            contents[activeCompany * contentButtons.length + index].style.display = 'block';
-
-            // Set the active state for the content buttons
-            contentButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-        });
-    });
-});
-
-
-
-const buttons = document.querySelectorAll('.about-btn button');
-const contents = document.querySelectorAll('.content');
-
-buttons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    contents.forEach(content => content.style.display = 'none');
-    contents[index].style.display = 'block';
-    buttons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-  });
-});
-
+// Call the function when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', setInitialState);
 
 
 // portfolio fillter 
@@ -227,3 +229,9 @@ ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "le
 ScrollReveal().reveal('.about-content,.skills', { origin: "right" });
 ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero', { origin: "bottom" });
 
+
+
+document.getElementById('chatButton').addEventListener('click', function() {
+    // Open the chatbot when the button is clicked
+    window.ChatbaseSDK.open();
+});

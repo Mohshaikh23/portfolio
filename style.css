@@ -234,6 +234,7 @@ section{
     justify-content: space-between;
     width: 220px;
     height: 45px;
+    gap: 2rem;
 }
 
 .social-media a{
@@ -249,7 +250,10 @@ section{
     border-radius: 50%;
     z-index: 1;
 }
+.social-media:hover{
 
+    transform: scale(1.1);
+}
 
 .social-media a:hover{
     background: var(--gradient-color-bg);
@@ -351,9 +355,11 @@ section{
 
 /* ==================== About section css code ============================ */
 
+
 .left-menu {
     display: flex;
     flex-direction: column;
+    margin-top: 5rem;
     gap: 1rem;
     margin-left: 100px;
 }
@@ -365,30 +371,49 @@ section{
     border: none;
     font-size: 1rem;
     font-weight: 500;
-    color: #000;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
-        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    color: black;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0;
     cursor: pointer;
     transition: all .3s ease;
 }
 
+.company-button h5 {
+    font-size: 1.2rem;
+}
+
+.company-button p {
+    font-size: 0.8rem;
+    color: black;
+    position: flex;
+    z-index: 1;
+    text-align: center;
+}
+
 .company-button.active {
     background: var(--gradient-color-bg);
-    color: #fff;
+    margin-left: -30px;
+    color: white !important; /* Change text color to white when active */
+    transform: scale(1.5);
 }
-
 .company-button:hover {
     box-shadow: var(--hover-box-shadow);
+    background: var(--gradient-color-bg);
+    transform: scale(1.1);
 }
-
-
 .about{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     gap: 1rem;
 }
-
+.main-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
 .about .about-img{
     position: relative;
 }
@@ -412,7 +437,9 @@ section{
 
 
 .about-content{
-    padding: 3rem 0;
+    display: flex;
+    padding: 1rem 0;
+    gap: 10rem;
 }
 
 .about-content h2{
@@ -427,6 +454,10 @@ section{
 
 .about-content p{
     color: var(--font-color);
+}
+
+.text-box{
+    margin: .8rem 0;
 }
 
 .text-box p{
@@ -459,9 +490,7 @@ section{
     color: #ffff;
 }
 
-.text-box{
-    margin: .8rem 0;
-}
+
 
 .content-btn > .content:not(:first-child){
     display: none;
@@ -998,8 +1027,8 @@ footer{
     position: fixed;
     /* background: #194eb9; */
     z-index: 1000;
-    bottom: 60px;
-    right: 10px;
+    bottom: 120px;
+    right: 20px;
     width: 50px;
     height: 50px;
     display: none;
@@ -1023,24 +1052,6 @@ footer{
     place-items: center;
     font-size: 25px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*======================= @keyframes ============================ */
 
@@ -1104,9 +1115,6 @@ footer{
         transform: translateY(0);
     }
 }
-
-
-
 
 /*======================= BrakPoints ============================ */
 
@@ -1235,4 +1243,68 @@ footer{
         width: 100%;
         padding: 13px;
     }
+}
+.right-column {
+    flex:1;
+    padding: 100px;
+    margin-top: -2rem;
+}
+.company-description {
+    display: none;
+    margin-left: 5rem;
+    margin-top: -4rem;
+    justify-content: space-between;
+}
+.company-description p{
+    color:darkblue;
+}
+.company-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.l-column {
+    flex: 1;
+}
+.l-column h3{
+    font-size: 1.8rem;
+}
+
+.r-column {
+    flex: 1;
+    text-align: right;
+}
+
+/* Adjust the styles based on your preferences */
+.r-column img {
+    max-width: 10rem;
+    height: 3rem;
+}
+.content-section {
+    display: none;
+}
+.content-section h3{
+    color: #000;
+    font-size: 1.8rem;
+}
+.active {
+    background-color: #2980b9;
+}
+.content-button {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    gap: auto;
+}
+.content-button:hover {
+    transform: scale(1.1);
+    background-color: var(--main-color);
 }

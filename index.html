@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohsin's Portfolio Website</title>
+    <title>Mohsin's Portfolio website</title>
     <link rel="stylesheet" href="style.css">
     <!-- boxicon css link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -13,17 +13,29 @@
 <body>
     <div class="overlay"></div>
     <header>
+        <script>
+            window.embeddedChatbotConfig = {
+            chatbotId: "JtP9c2e8HtQetL24S5-HG",
+            domain: "www.chatbase.co"
+            }
+        </script>
+        <script
+            src="https://www.chatbase.co/embed.min.js"
+            chatbotId="JtP9c2e8HtQetL24S5-HG"
+            domain="www.chatbase.co"
+            defer>
+        </script>
         <a href="#" class="logo"><span>M</span>ohsin</a>
         <ul class="navlist">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#portfolio">Projects</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="right-header">
-            <a href="#" class="btn">Let's chat <i class='bx bx-message-dots' ></i></a>
+            <a href="#" class="btn" id="chatButton">Let's chat <i class='bx bx-message-dots' ></i></a>
             <div class="menu-icon">
                 <div class="bar"></div>
             </div>
@@ -80,89 +92,377 @@
     </section>
 
     <section class="about" id="about">
-        <div class="about-img">
-            <!-- <div class="left-menu">
-                <<button data-index="0" class="company-button active" onclick="showSection(0)">Company 1</button>
-                <button data-index="1" class="company-button" onclick="showSection(1)">Company 2</button>
-                <button data-index="2" class="company-button" onclick="showSection(2)">Company 3</button>
-                <button data-index="3" class="company-button" onclick="showSection(3)">Company 4</button>
-            </div>
-            </div> -->
+        <div class="main-text">
+            <h2 class="heading">About Me</h2>
+            <span>What my Experience says..</span>
         </div>
-        <div id="section0" class="section active">
+
+        <div id="section1" class="section">
             <div class="about-content">
-                <h2 class="heading">About Me</h2>
-                <h3>2 Year's Experience as Data Analyst</h3>
-                <p>Data Analyst with a proven two-year track record in distilling complex datasets,
-                    implementing robust analytics solutions, and delivering actionable insights.<br>
-                    Proficient in data visualization, statistical analysis, and driving data-driven 
-                    decision-making for enhanced business performance.</p>
+                <div class="left-menu" id="leftColumn">
+                        <button class="company-button active" onclick="showCompany(1)">
+                            <h5>Business Promoted</h5>
+                            <p> June 2021 - September 2023</p>
+                        </button>
+                        <div class="timeline-indicator"></div>
 
-                <div class="about-btn">
-                    <button class="active">Main Skills</button>
-                    <button>Achievements</button>
-                    <button>Education</button>
+                        <button class="company-button" onclick="showCompany(2)">
+                            <h5>SparesHub</h5>
+                            <p> September 2020 ‑ February 2021</p>
+                        </button>
+                        <div class="timeline-indicator"></div>
+
+                        <button class="company-button" onclick="showCompany(3)">
+                            <h5>BuyCarsOnline</h5>
+                            <p> January 2019 ‑ August 2020</p>
+                        </button>
+                        <div class="timeline-indicator"></div>
+
+                        <button class="company-button" onclick="showCompany(4)">
+                            <h5>KTM Mumbai</h5>
+                            <p> January 2018 ‑ January 2019</p>
+                        </button>
+                        <div class="timeline-indicator"></div>
                 </div>
-
-                <div class="content-btn">
-                    <div class="content">
-                        <div class="text-box">
-                        <p>User Interactive Excel and Power BI Dashboards</p>
-                        <span>Expertise in developing user-friendly Excel and Power BI dashboards 
-                            for insightful data representation.</span>
+                <div class="right-column" id="rightColumn">
+                    
+                    
+                    <!------------------------DEFAULT-------------------------------------------------->
+                    <div id="defaultCompany" class="company-description">
+                        <h2>Welcome to My Portfolio</h2>
+                        <p>Select a company to view details.</p>
                     </div>
-                    <div class="text-box">
-                        <p>Web-scrapping & User Interface Reports</p>
-                        <span>Proficient in extracting data from websites and more and creating dynamic
-                            web reports using Python for enhanced user experience.</span>
-                    </div>
-                    <div class="text-box">
-                        <p>End to End Analysis</p>
-                        <span>Comprehensive skills in conducting end-to-end data analysis, 
-                            from data acquisition to actionable insights.</span>
-                    </div>
-                    </div>
-
-                    <div class="content">
-                        <div class="text-box">
-                            <p>Accenture North America Data Analytics and Visualization Job Simulation on Forage</p>
-                            <span>Analyzed 7 datasets to reveal content trends, providing strategic insights through a PowerPoint presentation for the client and stakeholders.</span>
+        
+                    <!------------------------COMPANY 1-------------------------------------------------->
+                    <div id="company1" class="company-description">
+                        <div class="company-info">
+                            <div class="l-column">
+                                <h2>Business Promoted</h2>
+                                <h3>Data Analyst</h3>
+                            </div>
+                            <div class="r-column">
+                                <img src="img/company/bp.png" alt="Company Image">
+                                <h4>Sept 2020 - Feb 2021</h4>
+                            </div>
                         </div>
-                        <div class="text-box">
-                            <p>PwC Switzerland Power BI Job Simulation on Forage</p>
-                            <span>Created impactful dashboards and demonstrated strong communication skills by delivering valuable insights on HR data.</span>
+                        <p>Data Analyst with a proven two-year track record in distilling complex datasets,
+                            implementing robust analytics solutions, and delivering actionable insights.<br>
+                            Proficient in data visualization, statistical analysis, and driving data-driven 
+                            decision-making for enhanced business performance.</p>
+                        <button class="content-button" onclick="showContent('MainSkills', 1)">Main Skills</button>
+                        <button class="content-button" onclick="showContent('Achievements', 1)">Achievements</button>
+                        <button class="content-button" onclick="showContent('Education', 1)">Projects</button>
+                
+                        <div id="contentMainSkills1" class="content-section">
+                            <h3>Main Skills</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                    <p>User Interactive Excel and Power BI Dashboards</p>
+                                    <span>Expertise in developing user-friendly Excel and Power BI dashboards 
+                                        for insightful data representation.</span>
+                                </div>
+                                <div class="text-box">
+                                    <p>Web-scrapping & User Interface Reports</p>
+                                    <span>Proficient in extracting data from websites and more and creating dynamic
+                                        web reports using Python for enhanced user experience.</span>
+                                </div>
+                                <div class="text-box">
+                                    <p>End to End Analysis</p>
+                                    <span>Comprehensive skills in conducting end-to-end data analysis, 
+                                        from data acquisition to actionable insights.</span>
+                                </div>
+                                </div>
+                            </ul>
                         </div>
-                        <div class="text-box">
-                            <p>BCG Data Science Job Simulation on Forage</p>
-                            <span>Led end-to-end analysis, ensuring predictive model precision for monthly discount offers, enhancing hypothesis-driven decision-making.</span>
+                
+                        <div id="contentAchievements1" class="content-section">
+                            <h3>Achievements</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Accenture North America Data Analytics and Visualization Job Simulation on Forage</p>
+                                        <span>Analyzed 7 datasets to reveal content trends, providing strategic insights through a PowerPoint presentation for the client and stakeholders.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>PwC Switzerland Power BI Job Simulation on Forage</p>
+                                        <span>Created impactful dashboards and demonstrated strong communication skills by delivering valuable insights on HR data.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>BCG Data Science Job Simulation on Forage</p>
+                                        <span>Led end-to-end analysis, ensuring predictive model precision for monthly discount offers, enhancing hypothesis-driven decision-making.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Open source contribution on PyPi for web scraping</p>
+                                        <span>Designed a library to extract real-time phone data from Flipkart.</span>
+                                    </div>
+                                </div>
+                            </ul>
                         </div>
-                        <div class="text-box">
-                            <p>Open source contribution on PyPi for web scraping</p>
-                            <span>Designed a library to extract real-time phone data from Flipkart.</span>
+                
+                        <div id="contentEducation1" class="content-section">
+                            <h3>Projects</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                    <p>Data Anlaysis using Microsoft Power BI</p>
+                                    <span>Data Analysis on Google Analytics data for Digital Marketing Companies.</span>
+                                </div>
+                                <div class="text-box">
+                                    <p>End-to-End Data pipeline (ETL process)</p>
+                                    <span>Created an end to end automated pipeline for extarcting, transforming and
+                                        loading the data reducing 60% manual wokrload.</span>
+                                </div>
+                                <div class="text-box">
+                                    <p>Dashboards and Reports using Excel/Google Sheets</p>
+                                    <span>Developed Reports for U.S Reposession Industry client for adh-oc queries 
+                                        solutions and KPI metered for Business accumen.</span>
+                                </div>
+                                </div>
+                                <!-- Add more education details as needed -->
+                            </ul>
                         </div>
                     </div>
-
-
-                    <div class="content">
-                        <div class="text-box">
-                        <p>Bachelor's Degree in Automobile Engineering, Pune University</p>
-                        <span>Graduated in 2017.</span>
+                    
+                    <!------------------------COMPANY 2-------------------------------------------------->
+                    <div id="company2" class="company-description">
+                        <div class="company-info">
+                            <div class="l-column">
+                                <h2>Spareshub</h2>
+                                <h3>Senior Sales Associate</h3>
+                            </div>
+                            <div class="r-column">
+                                <img src="img/company/sh.png" alt="Company Image">
+                                <h4>Jun 2021 - Sept 2023</h4>
+                            </div>
+                        </div>
+                        <p>As a Senior Sales Associate at Spareshub, I played a crucial role in driving sales and achieving business targets. My responsibilities included...</p>
+                        <button class="content-button" onclick="showContent('MainSkills', 2)">Sales Skills</button>
+                        <button class="content-button" onclick="showContent('Achievements', 2)">Sales Achievements</button>
+                        <button class="content-button" onclick="showContent('Education', 2)">Sales Projects</button>
+                    
+                        <div id="contentMainSkills2" class="content-section">
+                            <h3>Sales Skills</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Client Relationship Management</p>
+                                        <span>Developed and maintained strong relationships with clients, resulting in increased customer satisfaction and repeat business.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Negotiation and Closing</p>
+                                        <span>Proven ability to negotiate and close deals effectively, consistently meeting and exceeding sales targets.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Product Knowledge</p>
+                                        <span>Demonstrated in-depth knowledge of Spareshub products, ensuring accurate and persuasive communication with clients.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    
+                        <div id="contentAchievements2" class="content-section">
+                            <h3>Sales Achievements</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Top Sales Performer Award</p>
+                                        <span>Achieved recognition as a top-performing sales associate, surpassing sales targets consistently.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Key Account Acquisition</p>
+                                        <span>Secured major key accounts, contributing significantly to the company's revenue growth.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Sales Team Leadership</p>
+                                        <span>Provided leadership and guidance to the sales team, resulting in improved overall team performance.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    
+                        <div id="contentEducation2" class="content-section">
+                            <h3>Sales Projects</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Strategic Sales Campaign</p>
+                                        <span>Designed and executed a strategic sales campaign that increased customer engagement and boosted sales by 30%.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Market Expansion Initiative</p>
+                                        <span>Led initiatives to expand the market reach, identifying and tapping into new sales channels for Spareshub products.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Customer Loyalty Program</p>
+                                        <span>Developed and implemented a customer loyalty program, enhancing customer retention and fostering long-term relationships.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="text-box">
-                        <p>Internships and Work Experience</p>
-                        <span>Adappt Intelligence, 9 months</span>
+                    
+        
+                    <!------------------------COMPANY 3-------------------------------------------------->
+                    <div id="company3" class="company-description">
+                        <div class="company-info">
+                            <div class="l-column">
+                                <h2>Buy Cars Online</h2>
+                                <h3>Associate Sales Manager</h3>
+                            </div>
+                            <div class="r-column">
+                                <img src="img/company/bco.png" alt="Company Image">
+                                <h4>Jan 2019 - Aug 2020</h4>
+                            </div>
+                        </div>
+                        <p>As an Associate Sales Manager at Buy Cars Online, I played a pivotal role in driving marketing and sales initiatives, leading a dynamic team to achieve exceptional results.</p>
+                        <button class="content-button" onclick="showContent('MainSkills', 3)">Marketing Skills</button>
+                        <button class="content-button" onclick="showContent('Achievements', 3)">Sales Skills</button>
+                        <button class="content-button" onclick="showContent('Education', 3)">Team Leadership</button>
+                    
+                        <div id="contentMainSkills3" class="content-section">
+                            <h3>Marketing Skills</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Digital Marketing Strategy</p>
+                                        <span>Developed and executed effective digital marketing strategies, leveraging social media and online platforms to enhance brand visibility.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Content Marketing</p>
+                                        <span>Created engaging and targeted content for various marketing channels, driving customer engagement and lead generation.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Market Research</p>
+                                        <span>Conducted market research to identify trends, customer preferences, and competitor strategies for informed marketing decisions.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    
+                        <div id="contentAchievements3" class="content-section">
+                            <h3>Sales Skills</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Consultative Selling</p>
+                                        <span>Implemented consultative selling approaches, understanding customer needs and providing tailored solutions for increased sales.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Client Relationship Management</p>
+                                        <span>Built and maintained strong client relationships, ensuring customer satisfaction and fostering repeat business.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Negotiation and Closing</p>
+                                        <span>Demonstrated strong negotiation skills, resulting in successful deal closures and revenue growth.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    
+                        <div id="contentEducation3" class="content-section">
+                            <h3>Team Leadership</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Team Building and Motivation</p>
+                                        <span>Built and led a high-performing sales team, fostering a positive and motivated work environment.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Performance Management</p>
+                                        <span>Implemented performance management strategies, setting clear goals and driving team members to achieve and exceed targets.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Training and Development</p>
+                                        <span>Provided training and development opportunities to team members, enhancing their skills and capabilities.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="text-box">
-                        <p>Data Science Career Track - Certified Data Scientist, SkilloVilla</p>
-                        <span>Completed in 2022-23</span>
+                    
+        
+                    <!------------------------COMPANY 4-------------------------------------------------->
+                    <div id="company4" class="company-description">
+                        <div class="company-info">
+                            <div class="l-column">
+                                <h2>KTM Mumbai</h2>
+                                <h3>Showroom Sales Manager</h3>
+                            </div>
+                            <div class="r-column">
+                                <img src="img/company/ktm.jpg" alt="Company Image">
+                                <h4>Jan 2018 - Jan 2019</h4>
+                            </div>
+                        </div>
+                        <p>As the Showroom Sales Manager at KTM Mumbai, I spearheaded sales activities, specializing in probiking bikes, and efficiently managed showroom operations to deliver an exceptional customer experience.</p>
+                        <button class="content-button" onclick="showContent('MainSkills', 4)">Sales Strategies</button>
+                        <button class="content-button" onclick="showContent('Achievements', 4)">Customer Service</button>
+                        <button class="content-button" onclick="showContent('Education', 4)">Showroom Management</button>
+                    
+                        <div id="contentMainSkills4" class="content-section">
+                            <h3>Sales Strategies</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Probiking Bikes Expertise</p>
+                                        <span>Specialized in selling probiking bikes, providing in-depth product knowledge to customers and enthusiasts.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Targeted Sales Approaches</p>
+                                        <span>Developed and implemented targeted sales strategies to meet and exceed monthly and annual sales targets.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Market Analysis</p>
+                                        <span>Conducted market analysis to identify trends, customer preferences, and competitor activities for strategic planning.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    
+                        <div id="contentAchievements4" class="content-section">
+                            <h3>Customer Service</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Customer Relationship Building</p>
+                                        <span>Built strong and lasting relationships with customers, ensuring a positive and personalized buying experience.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Issue Resolution</p>
+                                        <span>Effectively addressed customer concerns and issues, ensuring high levels of customer satisfaction and retention.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>After-Sales Support</p>
+                                        <span>Provided exceptional after-sales support, including servicing, warranty claims, and product assistance.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    
+                        <div id="contentEducation4" class="content-section">
+                            <h3>Showroom Management</h3>
+                            <ul>
+                                <div class="content">
+                                    <div class="text-box">
+                                        <p>Inventory Management</p>
+                                        <span>Managed showroom inventory, ensuring optimal stock levels and availability of products.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Team Leadership</p>
+                                        <span>Led and motivated the showroom team, fostering a culture of excellence and achievement.</span>
+                                    </div>
+                                    <div class="text-box">
+                                        <p>Showroom Merchandising</p>
+                                        <span>Oversaw showroom layout and merchandising, optimizing visual appeal and product presentation.</span>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
-                    </div>
+                    
                 </div>
             </div>
-            <div class="cvContent">
-                <a href="img/Mohsin_Resume.pdf" target="_blank" class="btn d-CV">Download CV <i class='bx bx-download'></i></a>
-            </div>
-        </div>
+        </div>  
     </section>
 
     <section class="services" id="services">
