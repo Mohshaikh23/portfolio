@@ -1,6 +1,3 @@
-Certainly! Below is a sample `README.md` file for your HTML portfolio:
-
-```markdown
 # Portfolio README
 
 ## Overview
@@ -17,7 +14,6 @@ This repository contains the HTML and CSS code for a personal portfolio website.
 ## Demo
 You can view the live demo of the portfolio [here](#Certainly! Below is a sample `README.md` file for your HTML portfolio:
 
-```markdown
 # Portfolio README
 
 ## Overview
@@ -59,9 +55,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-```
 
-Replace `#your-live-demo-url` with the actual URL where your live portfolio is hosted. Additionally, provide details about your live demo, customization options, and contribution guidelines. Adjust the licensing information accordingly.).
 
 ## Features
 - Responsive design for various screen sizes.
@@ -88,6 +82,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-```
-
-Replace `#your-live-demo-url` with the actual URL where your live portfolio is hosted. Additionally, provide details about your live demo, customization options, and contribution guidelines. Adjust the licensing information accordingly.
